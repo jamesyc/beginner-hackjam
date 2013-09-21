@@ -18,28 +18,30 @@ You need to install Python 2.7 to complete this hack. You can do that for Window
 
 For Linux, it probably comes with your distribution, but if you need to, install it from your pacakge repositories. For Debian based distros, including Ubuntu, this probably is `sudo apt-get install python`.
 
-For Mac OS X, Python comes with your operating system, but the default python may be out of date. Get the newest version via [Homebrew](http://brew.sh). The installation command is: `ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"` followed with an `brew install python --with-brewed-openssl
+For Mac OS X, Python comes with your operating system, but the default python may be out of date. Get the newest version via [Homebrew](http://brew.sh). After homebrew is properly installed, run `brew install python --with-brewed-openssl
 ` to install python.
 
-
-^*DO NOT INSTALL IF YOU HAVE PREVIOUSLY INSTALLED MACPORTS. BAD THINGS WILL HAPPEN.
-
-Step 2: Set up your environment
+Step 1.5: Set up Pip
 ================================
 
 Before any hack, you need to make sure all your dependencies are set up. 
 
 Python has two amazing tools, called `virtualenv` and `pip` that enable developers to create sandboxes for their projects and easily install any online packages and libraries that other people have written. We'll be using mainly these two tools.
 
-The first thing you need is to make sure you have a Python package called `setuptools` installed. Here's how to install it:
+`pip` is something called a "package manage" that allows you to actually install libraries from online. Suppose I want to use a library that parses PDFs for me. BAM! `pip install pdfminer`. If I want a library that scrapes web pages for me: BAM! `pip install beautifulsoup`. You get the idea. `pip` stores all the awesome libraries that people have built for Python and with a single command, you get access to them. Here's how to install it:
 
-* Ubuntu: `sudo apt-get install python-setuptools`
-* OSX: `ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"`
+* Ubuntu: 
+`curl -O http://python-distribute.org/distribute_setup.py
+python distribute_setup.py
+curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+python get-pip.py`
+* OSX: Pip comes with Homebrew, no special setup needed.
 * Windows: insert Windows installation here
 
+Step 2: Set up your environment
+================================
 
-
-Installing `setuptools` will give you a command line tool called `easy_install`, which we'll use to install `virtualenv`.
+Installing `pip` allows us to easily install other packages, which we'll use to install `virtualenv`.
 
 Enter the following in your terminal to install `virtualenv`.
 ```
@@ -48,7 +50,6 @@ $ pip install virtualenv
 
 Now a quick word about `virtualenv`. It's a Python tool that allows you to create "sandboxes," or isolated environments in which you can code. When you need a Python library, you could install it globally, which means all your Python projects on your computer could use it. You could also install it locally, which means you install libraries on a project-by-project basis and no project will have any more dependencies available than it needs. The "sandbox" mentality means that we make sure each project stands alone, which means a lot when you may want to deploy these projects to remote computers.
 
-`virtualenv` comes with a "package manager" called `pip`. `pip` allows you to actually install libraries from online. Suppose I want to use a library that parses PDFs for me. BAM! `pip install pdfminer`. If I want a library that scrapes web pages for me: BAM! `pip install beautifulsoup`. You get the idea. `pip` stores all the awesome libraries that people have built for Python and with a single command, you get access to them.
 
 Now that you have `virtualenv` installed, you have to create a folder for your project.
 
