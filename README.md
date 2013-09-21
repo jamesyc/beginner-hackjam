@@ -14,7 +14,15 @@ Step 1: Learn and install Python
 
 The rest of the guide will assume some basic knowledge of the Python 2 language. Hopefully you've picked up some Python from 61A, but if you haven't, head over to the official Python [tutorial](http://docs.python.org/tutorial), which is pretty good! 
 
-You need to install Python 2.7 to complete this hack. You can do that [here](http://www.python.org/download/releases/2.7/).
+You need to install Python 2.7 to complete this hack. You can do that for Windows [here](http://www.python.org/download/releases/2.7/).
+
+For Linux, it probably comes with your distribution, but if you need to, install it from your pacakge repositories. For Debian based distros, including Ubuntu, this probably is `sudo apt-get install python`.
+
+For Mac OS X, Python comes with your operating system, but the default python may be out of date. Get the newest version via [Homebrew](http://brew.sh). The installation command is: `ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"` followed with an `brew install python --with-brewed-openssl
+` to install python.
+
+
+^*DO NOT INSTALL IF YOU HAVE PREVIOUSLY INSTALLED MACPORTS. BAD THINGS WILL HAPPEN.
 
 Step 2: Set up your environment
 ================================
@@ -26,7 +34,7 @@ Python has two amazing tools, called `virtualenv` and `pip` that enable develope
 The first thing you need is to make sure you have a Python package called `setuptools` installed. Here's how to install it:
 
 * Ubuntu: `sudo apt-get install python-setuptools`
-* OSX: insert OSX installation here
+* OSX: `ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"`
 * Windows: insert Windows installation here
 
 
@@ -35,7 +43,7 @@ Installing `setuptools` will give you a command line tool called `easy_install`,
 
 Enter the following in your terminal to install `virtualenv`.
 ```
-$ sudo easy_install virtualenv
+$ pip install virtualenv
 ```
 
 Now a quick word about `virtualenv`. It's a Python tool that allows you to create "sandboxes," or isolated environments in which you can code. When you need a Python library, you could install it globally, which means all your Python projects on your computer could use it. You could also install it locally, which means you install libraries on a project-by-project basis and no project will have any more dependencies available than it needs. The "sandbox" mentality means that we make sure each project stands alone, which means a lot when you may want to deploy these projects to remote computers.
