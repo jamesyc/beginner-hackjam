@@ -33,7 +33,7 @@ Python has two amazing tools, called `virtualenv` and `pip` that enable develope
 * Ubuntu: 
         ```curl -O http://python-distribute.org/distribute_setup.py
         python distribute_setup.py
-        curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py`
+        curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
         python get-pip.py```
 * OSX: Pip comes with Homebrew, no special setup needed.
 * Windows: insert Windows installation here
