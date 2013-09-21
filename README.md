@@ -31,10 +31,10 @@ Python has two amazing tools, called `virtualenv` and `pip` that enable develope
 `pip` is something called a "package manage" that allows you to actually install libraries from online. Suppose I want to use a library that parses PDFs for me. BAM! `pip install pdfminer`. If I want a library that scrapes web pages for me: BAM! `pip install beautifulsoup`. You get the idea. `pip` stores all the awesome libraries that people have built for Python and with a single command, you get access to them. Here's how to install it:
 
 * Ubuntu: 
-`curl -O http://python-distribute.org/distribute_setup.py
-python distribute_setup.py
-curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
-python get-pip.py`
+`curl -O http://python-distribute.org/distribute_setup.py`
+`python distribute_setup.py`
+`curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py`
+`python get-pip.py`
 * OSX: Pip comes with Homebrew, no special setup needed.
 * Windows: insert Windows installation here
 
