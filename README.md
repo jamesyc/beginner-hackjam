@@ -18,8 +18,7 @@ You need to install Python 2.7 to complete this hack. You can do that for Window
 
 For Linux, it probably comes with your distribution, but if you need to, install it from your pacakge repositories. For Debian based distros, including Ubuntu, this probably is `sudo apt-get install python`.
 
-For Mac OS X, Python comes with your operating system, but the default python may be out of date. Get the newest version via [Homebrew](http://brew.sh). After homebrew is properly installed, run `brew install python --with-brewed-openssl
-` to install python.
+For Mac OS X, Python comes with your operating system, but the default python may be out of date. Get the newest version via [Homebrew](http://brew.sh). After homebrew is properly installed, run `brew install python --with-brewed-openssl` to install python.
 
 Step 1.5: Set up Pip
 ================================
@@ -30,15 +29,7 @@ Python has two amazing tools, called `virtualenv` and `pip` that enable develope
 
 `pip` is something called a "package manage" that allows you to actually install libraries from online. Suppose I want to use a library that parses PDFs for me. BAM! `pip install pdfminer`. If I want a library that scrapes web pages for me: BAM! `pip install beautifulsoup`. You get the idea. `pip` stores all the awesome libraries that people have built for Python and with a single command, you get access to them. Here's how to install it:
 
-* Ubuntu: 
-
-        curl -O http://python-distribute.org/distribute_setup.py
-
-        python distribute_setup.py
-
-        curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
-
-        python get-pip.py
+* Linux: $ `sudo apt-get install python-setuptools python-pip`
 * OSX: Pip comes with Homebrew, no special setup needed.
 * Windows: insert Windows installation here
 
