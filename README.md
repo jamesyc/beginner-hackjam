@@ -40,15 +40,11 @@ Step 1: Learn and install Python
 
 The rest of the guide will assume some basic knowledge of the Python 2 language. Hopefully you've picked up some Python from 61A, but if you haven't, head over to the official Python [tutorial](http://docs.python.org/tutorial), which is pretty good! 
 
-<<<<<<< HEAD
 You need to install Python 2.7 to complete this hack. You can do that for Windows [here](http://www.python.org/download/releases/2.7/).
-=======
-You need to install Python 2.7 to complete this hack. You can do that [here](http://www.python.org/download/releases/2.7/). If you have OSX, you already should have Python 2.7 installed.
->>>>>>> upstream/master
 
 For Linux, it probably comes with your distribution, but if you need to, install it from your pacakge repositories. For Debian based distros, including Ubuntu, this probably is `sudo apt-get install python`.
 
-For Mac OS X, Python comes with your operating system, but the default python may be out of date. Get the newest version via [Homebrew](http://brew.sh). After homebrew is properly installed, run `brew install python --with-brewed-openssl` to install python.
+For Mac OS X, Python comes with your operating system, but the default python may be out of date- OS X comes with a version of Python 2 that's a couple years out of date due to legal reasons. Get the newest version via [Homebrew](http://brew.sh). After homebrew is properly installed, run `brew install python --with-brewed-openssl` to install python.
 
 Step 1.5: Set up Pip
 ================================
@@ -59,13 +55,8 @@ Python has two amazing tools, called `virtualenv` and `pip` that enable develope
 
 `pip` is something called a "package manage" that allows you to actually install libraries from online. Suppose I want to use a library that parses PDFs for me. BAM! `pip install pdfminer`. If I want a library that scrapes web pages for me: BAM! `pip install beautifulsoup`. You get the idea. `pip` stores all the awesome libraries that people have built for Python and with a single command, you get access to them. Here's how to install it:
 
-<<<<<<< HEAD
 * Linux: `$ sudo apt-get install python-setuptools python-pip`
 * OSX: Pip comes with Homebrew, no special setup needed.
-=======
-* Ubuntu: `sudo apt-get install python-setuptools`
-* OSX: You're in luck! OSX comes with Python 2.7 and setuptools already installed.
->>>>>>> upstream/master
 * Windows: insert Windows installation here
 
 Step 2: Set up your environment
